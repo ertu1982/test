@@ -1,0 +1,17 @@
+[28-Apr-2024 18:39:47 UTC] WordPress database error Duplicate column name 'schema' for query ALTER TABLE wp_aioseo_posts
+				ADD `schema` longtext DEFAULT NULL AFTER `seo_score` made by include('phar:///usr/local/bin/wp-cli-2.6.0.phar/php/boot-phar.php'), include('phar:///usr/local/bin/wp-cli-2.6.0.phar/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\Plugin\Common\Main\Updates->runUpdates, AIOSEO\Plugin\Common\Main\Updates->addSchemaColumn, AIOSEO\Plugin\Common\Utils\Database->execute
+[28-Apr-2024 18:39:47 UTC] WordPress database error Duplicate column name 'primary_term' for query ALTER TABLE wp_aioseo_posts
+				ADD `primary_term` longtext DEFAULT NULL AFTER `page_analysis` made by include('phar:///usr/local/bin/wp-cli-2.6.0.phar/php/boot-phar.php'), include('phar:///usr/local/bin/wp-cli-2.6.0.phar/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\Plugin\Common\Main\Updates->runUpdates, AIOSEO\Plugin\Common\Main\Updates->addPrimaryTermColumn, AIOSEO\Plugin\Common\Utils\Database->execute
+[28-Apr-2024 18:39:47 UTC] WordPress database error Table 'wp_aioseo_crawl_cleanup_blocked_args' already exists for query CREATE TABLE wp_aioseo_crawl_cleanup_blocked_args (
+					`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+					`key` text,
+					`value` text,
+					`key_value_hash` varchar(40),
+					`regex` varchar(255),
+					`hits` int(20) NOT NULL DEFAULT 0,
+					`created` datetime NOT NULL,
+					`updated` datetime NOT NULL,
+					PRIMARY KEY (id),
+					UNIQUE KEY ndx_aioseo_crawl_cleanup_blocked_args_key_value_hash (key_value_hash),
+					UNIQUE KEY ndx_aioseo_crawl_cleanup_blocked_args_regex (regex)
+				) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci; made by include('phar:///usr/local/bin/wp-cli-2.6.0.phar/php/boot-phar.php'), include('phar:///usr/local/bin/wp-cli-2.6.0.phar/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\Plugin\Common\Main\Updates->runUpdates, AIOSEO\Plugin\Common\Main\Updates->addQueryArgMonitorTables, AIOSEO\Plugin\Common\Utils\Database->execute
